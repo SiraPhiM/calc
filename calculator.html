@@ -1,0 +1,54 @@
+<? session_start() ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Мигрант-Assistant</title>
+</head>
+<body>
+
+    <div class="container">
+
+        <header class="header">
+        <a href="main.php" class="logo">МИГРАНТ ASSISTANT</a>
+                    
+                    <nav class="nav_panel">
+                        <a class="nav_item" href="questions.php">Вопрос юристу</a>
+                        <a class="nav_item" href="lk.php">Мой профиль</a>
+                        <a class="nav_item" href="calculator.php">Расчет времени пребывания</a>
+                    </nav>
+
+            <a class="btn_grn">+7 800 555 35 35</a>
+        </header>
+
+    </div>
+
+    <div class="container">
+        <div class="calculator">
+            <div class="title_section">
+                <h1>Контроль сроков пребывания</h1>
+            </div>
+            <form class="calc">
+                <label for="entry">Укажите дату въезда РФ</label>
+                <input type="date" class="form_input  entry" name="entry" required max="2023-04-10">
+
+                <label>Укажите дату предыдущего пребывания</label>
+                <span>С:</span>
+                <input type="date" class="form_input  from" name="from" required max="2023-04-10">
+                <span>по:</span>
+                <input type="date" class="form_input  to" name="to" required max="2023-04-10">
+                <span class="deadline"></span>
+                <span class="days"></span>
+                <a class="calculate btn_grn">Рассчитать</a>
+                
+                
+            </form>
+        </div>
+    </div>
+
+    <script src="js/calculator.js"></script>
+</body>
+<html>
